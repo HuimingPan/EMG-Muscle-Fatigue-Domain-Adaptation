@@ -1,0 +1,39 @@
+General:
+  project_name: Force-EMG-Fatigue
+  project_dir: D:/Codes/Projects/EMG/Force-EMG-Fatigue
+  data_dir: D:/Codes/Projects/EMG/Force-EMG-Fatigue/data
+  neptune: False
+  neptune_model: False
+
+  data_filename: False
+Data:
+  emg_fs: 2048
+  force_fs: 200
+Training:
+  training_file: 1-1-124578-2-7
+  test_file: 1-1-369
+  fatigue_test_file: 1-2-369
+  window_size: 512
+  stride: 10
+  batch_size: 1024
+  epochs: 50
+  device: cuda
+  lambda: 100
+  LR: 0.001
+  Electrodes: "All"
+Model:
+  cnn_params_ws_2048: [25, 12, 20, 10, 14,2]
+  cnn_params_ws_1024: [23, 8, 17, 8, 14, 1]
+  cnn_params_ws_512:  [21, 6, 15, 6, 12,1]
+  cnn_params_ws_256: [19, 6, 15, 4, 7,1]
+  cnn_params_ws_128: [17, 4, 15, 2, 7,1]
+  cnn_params_ws_64: [16, 2, 13, 2, 7, 1]
+  cnn2d_params: [[4,12], 4, [4,4], 2, [3,4], 1]
+Visualization:
+  figsize: [10, 5]
+  font_label:
+    size: 12
+    fontproperties: Times New Roman
+  font_title:
+    size: 20
+    fontproperties: Times New Roman
